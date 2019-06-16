@@ -1,0 +1,9 @@
+{
+    "tasksPath": "./gulp",
+    "baseDir": "./",
+    "baseUrl": "http://crud-generator",
+    "baseCombinedName": "all",
+    "sass": "admin/assets/sass/",
+    "css": "admin/assets/stylesheets/",
+    "scripts": "admin/assets/javascripts/"
+}
