@@ -6,7 +6,11 @@ Gulp tasks for PHP CRUD Generator - https://www.phpcrudgenerator.com
 
 PHP CRUD Generator is an intelligent web application that allows you to build a complete Bootstrap admin panel using a graphical user interface.
 
-PHPCG is suitable for [any PHP MySQL project](https://www.phpcrudgenerator.com/documentation/index).
+This package is intended to edit and compile the included Bootstrap SASS themes with Gulp.
+
+PHP CRUD Generator includes a custom default them + all the themes from [Bootswatch](https://bootswatch.com/).
+
+PHP CRUD Generator is [suitable for any PHP MySQL project](https://www.phpcrudgenerator.com/documentation/index).
 
 For more information, please refer to the website and documentation.
 
@@ -14,7 +18,9 @@ For more information, please refer to the website and documentation.
 
 ### Prerequisites
 
-Node.js installed for Gulp tasks
+- PHP CRUD Generator
+- Node.js installed for Gulp tasks
+
 
 ### Installation
 
@@ -24,7 +30,7 @@ Node.js installed for Gulp tasks
 
 3. Open command prompt, navigate to your project folder
 
-4. run npm: `npm install` to install node_modules.
+4. run npm: `npm install` to install the node_modules.
 
 ## Features
 
@@ -34,7 +40,9 @@ Node.js installed for Gulp tasks
 gulp sass
 ```
 
-Open your Terminal and run `gulp sass` to compile Bootstrap and the Admin Panel CSS from _/admin/assets/sass_ to _/admin/assets/stylesheets_
+1. Open _gulp/config.json_ and replace the name of the theme with the one that you want to compile
+
+2. Open your Terminal and run `gulp sass` to compile Bootstrap and the Admin Panel CSS from _/admin/assets/sass/themes/[your-theme]_ to _/admin/assets/stylesheets/themes/[your-theme]_
 
 ### Minify and Compile Bootstrap Javascript and Admin Panel Javascripts
 

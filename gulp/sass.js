@@ -19,7 +19,7 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var strip = require('gulp-strip-comments');
 
-module.exports = function(gulp, plugins, config) {
+module.exports = function (gulp, plugins, config) {
     // Compile scss files
     function runSass() {
         return gulp
@@ -52,18 +52,6 @@ module.exports = function(gulp, plugins, config) {
             .pipe(gulp.dest(config.css));
     }
 
-    function runCombinecss() {
-        // cssnano has to be finished before combinecss
-        return gulp
-            .src([
-                config.css + '*.min.css',
-                '!' + config.css + config.baseCombinedName + '.min.css',
-                '!jquery.dataTables.min.css'
-            ])
-            .pipe(concat(config.baseCombinedName + '.min.css'))
-            .pipe(gulp.dest(config.css));
-    }
-
     // main task
-    return gulp.series(runSass, runPostcss, runCssnano, runCombinecss);
+    return gulp.series(runSass, runPostcss, runCssnano);
 };
